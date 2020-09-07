@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Goran Vucinac | Front-End Developer</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Import Vue 3 -->
+    <script src="https://unpkg.com/vue@3.0.0-beta.24/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header id="nav">
+      <div
+        class="menu-toggler"
+        :class="{'open': navOpen}"
+        @click="navOpen = !navOpen"
+      >
+        <div class="bar half start"></div>
+        <div class="bar"></div>
+        <div class="bar half end"></div>
+      </div>
+      <nav class="top-nav" :class="{'open': navOpen}">
+        <ul class="nav-list">
+          <li>
+            <a href="index.html" class="nav-link" @click="navOpen = false"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="nav-link" @click="navOpen = false">About</a>
+          </li>
+          <li>
+            <a href="#services" class="nav-link" @click="navOpen = false"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="#portfolio" class="nav-link" @click="navOpen = false"
+              >Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#expirience" class="nav-link" @click="navOpen = false"
+              >Expirience</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" @click="navOpen = false"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="landing-text">
+        <p><span class="time-of-day">{{ timestamp }}!</span> I'm</p>
+        <h1>
+          Goran <br />
+          Vucinac
+        </h1>
+        <h6>A Front-End Developer</h6>
+        <div class="button">
+          <div class="button_bckg"></div>
+          <a href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="about" id="about">
+      <div class="container">
+        <div class="profile-img">
+          <img src="images/portfolioImage.jpg" alt="" />
+        </div>
+        <div class="about-details">
+          <div class="about-heading">
+            <h1>About</h1>
+            <h6>Myself</h6>
+          </div>
+          <p>
+            Hello I'm Goran, a front-end developer based in Serbia.
+            <span class="devide"></span>
+            I enjoy creating things that live on the internet, whether that be
+            websites, applications, or anything in between. My goal is to always
+            build products that provide pixel-perfect, performant experiences.
+            <span class="devide"></span>
+            I started learning front-end development by myself in the February
+            of 2019, it started like a hobby but became a passion. I'm able to
+            work with the following technologies:
+          </p>
+          <ul>
+            <li>
+              <img
+                class="icons"
+                src="./images/iconfinder_html5_245995.png"
+                alt=""
+              />
+              HTML 5
+            </li>
+            <li>
+              <img
+                class="icons"
+                src="./images/iconfinder_badge-css-3_317756.png"
+                alt=""
+              />
+              CSS 3, Animations, Flexbox, Responsive Web Design
+            </li>
+            <li>
+              <img
+                class="icons"
+                src="./images/iconfinder_code-programming-javascript-software-develop-command-language_652581.png"
+                alt=""
+              />
+              JavaScript, ECMAScript 6
+            </li>
+            <li>
+              <img class="icons" src="./images/vue.png" alt="" /> Vue, Vue
+              Router, Vuetify
+            </li>
+            <li>
+              <img class="icons" src="./images/bootstrap.png" alt="" />
+              Bootstrap
+            </li>
+            <li>
+              <img
+                class="icons"
+                src="./images/iconfinder_wordpress_727234.png"
+                alt=""
+              />
+              Wordpress
+            </li>
+
+            <li>
+              <img
+                class="icons"
+                src="./images/iconfinder_github-social-media_765246.png"
+                alt=""
+              />
+              GitHub
+            </li>
+            <li>
+              <img
+                class="icons"
+                src="./images/iconfinder_logo_brand_brands_logos_adobe_photoshop_2993707.png"
+                alt=""
+              />
+              Photoshop
+            </li>
+          </ul>
+          <p>Technologies i would like to master:</p>
+          <ul>
+            <li><img class="icons" src="./images/vue.png" alt="" /> Vuex</li>
+            <li>
+              <img class="icons" src="./images/Quasar.png" alt="" /> Quasar
+            </li>
+            <li>
+              <img class="icons" src="./images/figma.png" alt="" /> Figma &
+              Design
+            </li>
+            <li>
+              <img
+                class="icons"
+                src="./images/iconfinder_Web_Design_1016081.png"
+                alt=""
+              />
+              UI & UX
+            </li>
+            <li>
+              <img
+                class="icons"
+                src="./images/iconfinder_06_Idea_2064481.png"
+                alt=""
+              />
+              And lots more...
+            </li>
+          </ul>
+          <div class="social-media">
+            <ul class="nav-list">
+              <li>
+                <a href="#" class="icon-link"
+                  ><i class="fab fa-facebook-square"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/vuchke"
+                  class="icon-link"
+                  ><i class="fab fa-github-square"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="icon-link"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <h1>Services</h1>
+          <h6>What i can do for you</h6>
+        </div>
+        <div class="my-skills">
+          <div class="skill">
+            <div class="icon-container">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <h1>Mobile-friendly</h1>
+            <p>
+              A responsive design makes your website accessible to all users,
+              regardles of their device.
+            </p>
+          </div>
+          <div class="skill">
+            <div class="icon-container">
+              <i class="fas fa-code"></i>
+            </div>
+            <h1>Web Development</h1>
+            <p>
+              Every website should be built with two primary goals: Firstly, it
+              needs to work across all devices. Secondly, it needs to be fast as
+              possible.
+            </p>
+          </div>
+          <div class="skill">
+            <div class="icon-container">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h1>Performance, SEO, & accessibility testing</h1>
+            <p>
+              Make your website fast, easy to find, and reach the widest
+              audience possible.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-heading">
+          <h1>Portfolio</h1>
+          <h6>View some of my recent work</h6>
+        </div>
+
+        <div class="featured-projects">
+          <h2 class="portfolio-headings">Featured Projects</h2>
+          <div class="featured-project-item">
+            <div class="project-container">
+              <div class="project-image">
+                <a
+                  href="https://vuchke.github.io/Hungry/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img
+                    src="./images/project-screenshots/Hungry Restaurant.webp"
+                    alt=""
+                /></a>
+              </div>
+              <h3 class="project-name">Hungry People Restaurant</h3>
+              <div class="project-description">
+                <div class="project-links">
+                  <a
+                    href="https://github.com/vuchke/Hungry"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >View Code</a
+                  >
+                  <a
+                    href="https://vuchke.github.io/Hungry/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >View Demo</a
+                  >
+                </div>
+
+                <div class="project-content">
+                  <p>Fully responsive landing page for a restaurant.</p>
+                  <h5>Technologies Used:</h5>
+                  <ul class="tech-used">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Vue</li>
+                    <li>Jquery</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="featured-project-item">
+            <div class="project-container">
+              <div class="project-image">
+                <a
+                  href="https://vuchke.github.io/travelix/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img src="./images/project-screenshots/Travelix.webp" alt=""
+                /></a>
+              </div>
+              <h3 class="project-name">Travelix</h3>
+              <div class="project-description">
+                <div class="project-links">
+                  <a
+                    href="https://github.com/vuchke/travelix"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >View Code</a
+                  >
+                  <a
+                    href="https://vuchke.github.io/travelix/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >View Demo</a
+                  >
+                </div>
+
+                <div class="project-content">
+                  <p>Fully responsive landing page for a Travel agency.</p>
+                  <h5>Technologies Used:</h5>
+                  <ul class="tech-used">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="portfolio-headings">Other noteworthy projects</h2>
+        <div class="portfolio-item">
+          <div class="portfolio-img has-margin-right">
+            <a
+              href="https://vuchke.github.io/DoggieDaycare/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img src="images/project-screenshots/Doggie Daycare.webp" alt=""
+            /></a>
+          </div>
+          <div class="portfolio-description">
+            <h6>Web Development</h6>
+            <h1>Doggie Daycare Center</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
+              nesciunt commodi, iusto tempore consectetur recusandae.
+            </p>
+
+            <div class="project-links">
+              <a
+                href="https://github.com/vuchke/DoggieDaycare"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Code</a
+              >
+              <a
+                href="https://vuchke.github.io/DoggieDaycare/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Demo</a
+              >
+            </div>
+
+            <ul class="tech-used">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-description has-margin-right">
+            <h6>Web Design & Web Development</h6>
+            <h1>Casovi Matematike</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
+              nesciunt commodi, iusto tempore consectetur recusandae.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/vuchke/Matematika"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Code</a
+              >
+              <a
+                href="https://vuchke.github.io/Matematika/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Demo</a
+              >
+            </div>
+            <ul class="tech-used">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+          <div class="portfolio-img">
+            <a
+              href="https://vuchke.github.io/Matematika/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                src="./images/project-screenshots/Casovi Matematike.webp"
+                alt=""
+            /></a>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-img has-margin-right">
+            <a
+              href="https://vuchke.github.io/The-Rosa/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img src="./images/project-screenshots/The Rosa.webp" alt=""
+            /></a>
+          </div>
+          <div class="portfolio-description">
+            <h6>Web Development</h6>
+            <h1>The Rosa</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
+              nesciunt commodi, iusto tempore consectetur recusandae.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://github.com/vuchke/The-Rosa"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Code</a
+              >
+              <a
+                href="https://vuchke.github.io/The-Rosa/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Demo</a
+              >
+            </div>
+            <ul class="tech-used">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <h1>Contact</h1>
+          <h6>Let work together</h6>
+        </div>
+        <form class="form" @submit.prevent="checkForm">
+          <div class="input-group-wrap">
+            <div class="input-group">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                v-model="name"
+              />
+              <span class="form-bar"></span>
+              <p class="form-error" v-if="nameError">Please enter your name</p>
+            </div>
+            <div class="input-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your Email"
+                v-model="email"
+              />
+              <span class="form-bar"></span>
+              <p class="form-error" v-if="emailError">
+                Please enter your email
+              </p>
+              <p class="form-error" v-if="emailValidError">
+                Please enter a valid email
+              </p>
+            </div>
+          </div>
+
+          <textarea
+            name="subject"
+            id="subject"
+            cols="20"
+            rows="5"
+            placeholder="Subject"
+            v-model="message"
+          ></textarea>
+          <span class="form-bar"></span>
+          <p class="form-error" v-if="messageError">
+            Please enter your message
+          </p>
+
+          <button
+            type="submit"
+            class="form-button"
+            :class="{'disabled': !formIsValid}"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="copyright">
+      <a href="#nav">
+        <div class="up" id="up">
+          <i class="fas fa-chevron-up"></i>
+        </div>
+      </a>
+      <p>&copy; 2020</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
