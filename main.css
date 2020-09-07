@@ -504,6 +504,12 @@ li {
   font-size: 1.6rem;
   font-weight: 400;
   margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.671);
+}
+.project-content span {
+  /* font-size: 1.7rem;
+  font-weight: 600; */
+  color: rgb(255, 255, 255);
 }
 .project-content h5 {
   font-size: 1.6rem;
