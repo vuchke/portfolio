@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Goran Vucinac | Front-End Developer</title>
+    <link rel="shortcut icon" type="img/webp" href="./images/favicon.webp" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -221,31 +222,35 @@
             <div class="icon-container">
               <i class="fas fa-layer-group"></i>
             </div>
-            <h1>Mobile-friendly</h1>
+            <h1>Mobile Optimization</h1>
             <p>
-              A responsive design makes your website accessible to all users,
-              regardles of their device.
+              Mobile web development is exploding. Smart phones and tablets
+              dominate the market, and users can browse the web from anywhere
+              now, not just at home.
             </p>
           </div>
+
           <div class="skill">
             <div class="icon-container">
               <i class="fas fa-code"></i>
             </div>
             <h1>Web Development</h1>
             <p>
-              Every website should be built with two primary goals: Firstly, it
-              needs to work across all devices. Secondly, it needs to be fast as
-              possible.
+              I'm passionate about web design and development, and interested in
+              mobile app development. As I grow as a developer, I hope to write
+              clean, readable code that can be used by others and leveraged to
+              create beautiful software.
             </p>
           </div>
           <div class="skill">
             <div class="icon-container">
               <i class="fas fa-chart-line"></i>
             </div>
-            <h1>Performance, SEO, & accessibility testing</h1>
+            <h1>HTML / CSS / JavaScript</h1>
             <p>
-              Make your website fast, easy to find, and reach the widest
-              audience possible.
+              Have an existing design for a website that you need integrated
+              into HTML or CSS? I can take that design and turn it into a static
+              or dynamic website using HTML5, CSS3, and JavaScript.
             </p>
           </div>
         </div>
@@ -298,7 +303,6 @@
                     <li>CSS3</li>
                     <li>JavaScript</li>
                     <li>Vue</li>
-                    <li>Jquery</li>
                   </ul>
                 </div>
               </div>
@@ -469,8 +473,11 @@
     <section class="contact" id="contact">
       <div class="container">
         <div class="section-heading">
-          <h1>Contact</h1>
-          <h6>Let work together</h6>
+          <h1>Get In Touch</h1>
+          <h6>
+            Have a sweet project in mind or just want to say hi? <br />
+            Feel free to send me a message!
+          </h6>
         </div>
         <form class="form" @submit.prevent="checkForm">
           <div class="input-group-wrap">
@@ -483,8 +490,15 @@
                 placeholder="Enter your name"
                 v-model="name"
               />
-              <span class="form-bar"></span>
-              <p class="form-error" v-if="nameError">Please enter your name</p>
+              <span
+                class="form-bar"
+                :class="{'invalid-form-input': nameError}"
+              ></span>
+              <transition name="fadeInError">
+                <p class="form-error" v-if="nameError">
+                  Please enter your name
+                </p>
+              </transition>
             </div>
             <div class="input-group">
               <label for="email">Email:</label>
@@ -495,16 +509,24 @@
                 placeholder="Enter your Email"
                 v-model="email"
               />
-              <span class="form-bar"></span>
-              <p class="form-error" v-if="emailError">
-                Please enter your email
-              </p>
-              <p class="form-error" v-if="emailValidError">
-                Please enter a valid email
-              </p>
+              <span
+                class="form-bar"
+                :class="{'invalid-form-input': emailValidError || emailError}"
+              ></span>
+              <transition name="fadeInError">
+                <p class="form-error" v-if="emailError">
+                  Please enter your email
+                </p>
+              </transition>
+              <transition
+                ><p class="form-error" v-if="emailValidError">
+                  Please enter a valid email
+                </p>
+              </transition>
             </div>
           </div>
 
+          <label for="subject">Subject:</label>
           <textarea
             name="subject"
             id="subject"
@@ -513,11 +535,15 @@
             placeholder="Subject"
             v-model="message"
           ></textarea>
-          <span class="form-bar"></span>
-          <p class="form-error" v-if="messageError">
-            Please enter your message
-          </p>
-
+          <span
+            class="form-bar"
+            :class="{'invalid-form-input': messageError}"
+          ></span>
+          <transition name="fadeInError">
+            <p class="form-error" v-if="messageError">
+              Please enter your message
+            </p>
+          </transition>
           <button
             type="submit"
             class="form-button"
