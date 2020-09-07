@@ -331,6 +331,7 @@ li {
 }
 .icons {
   max-width: 16px;
+  max-height: 16px;
   margin-right: 15px;
 }
 .social-media {
@@ -472,6 +473,8 @@ li {
 .project-links {
   margin-top: 2rem;
   margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 .project-links a {
   font-size: 1.5rem;
@@ -515,6 +518,7 @@ li {
   padding: 0.5rem 1rem;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 5px;
+  margin: 0 1rem;
 }
 
 .portfolio-item {
@@ -772,7 +776,7 @@ li {
     flex-direction: initial;
   }
   .about-details li {
-    margin: 0 2rem;
+    margin: 1rem 2rem;
   }
   .icon-container {
     width: 7rem;

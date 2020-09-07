@@ -39,7 +39,7 @@ const contactApp = {
       emailValidError: null,
       message: null,
       messageError: null,
-      errors: [],
+      errors: null,
     };
   },
   computed: {
