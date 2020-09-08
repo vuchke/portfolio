@@ -290,7 +290,7 @@ li {
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 .profile-img:hover::before {
-  background-color: transparent;
+  background-color: #003cbd28;
 }
 
 .profile-img::after {
