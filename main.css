@@ -758,7 +758,7 @@ li {
     background-size: cover;
   }
   .landing-text h1 {
-    font-size: 15rem;
+    font-size: 10rem;
   }
   .landing-text h6 {
     font-size: 1.7rem;
@@ -811,7 +811,8 @@ li {
     flex-direction: column;
   }
   .profile-img {
-    margin: 0 0 7rem 0;
+    margin: 0 0 12rem 0;
+    max-width: 200px;
   }
   .portfolio-item {
     flex-direction: column;

@@ -13,7 +13,7 @@ const navMenu = {
     getNow() {
       const today = new Date();
       const timeOfDay = today.getHours();
-      console.log(timeOfDay);
+
       if (timeOfDay >= 5 && timeOfDay < 12) {
         this.timestamp = "Good Morning";
       } else if (timeOfDay >= 12 && timeOfDay < 18) {
@@ -51,6 +51,10 @@ const contactApp = {
       if (this.validEmail(this.email)) {
         this.emailValidError = false;
       }
+      if (this.email) {
+        this.emailError = false;
+      }
+
       if (this.message) {
         this.messageError = false;
       }
@@ -93,7 +97,7 @@ const contactApp = {
         this.messageError = false;
       }
 
-      if (errors.length < 1) {
+      if (this.errors.length < 1) {
         this.valid = true;
       }
     },
