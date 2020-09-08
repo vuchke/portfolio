@@ -352,21 +352,21 @@ li {
 }
 .social-media li:nth-child(1) a::before {
   font-family: "Font Awesome 5 Brands";
-  font-weight: 900;
+
   content: "\f082";
   color: #4267b2;
   border-bottom: 4px solid #4267b2;
 }
 .social-media li:nth-child(2) a::before {
   font-family: "Font Awesome 5 Brands";
-  font-weight: 900;
+
   content: "\f092";
   color: #6cc644;
   border-bottom: 4px solid #6cc644;
 }
 .social-media li:nth-child(3) a::before {
   font-family: "Font Awesome 5 Brands";
-  font-weight: 900;
+
   content: "\f08c";
   color: #0e76a8;
   border-bottom: 4px solid #0e76a8;
