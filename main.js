@@ -99,11 +99,30 @@ const contactApp = {
 
       if (this.errors.length < 1) {
         this.valid = true;
+        this.sendEmail(e);
       }
     },
     validEmail(email) {
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
+    },
+    sendEmail: (e) => {
+      emailjs
+        .sendForm(
+          "gmail_test",
+          "portfolio_template",
+          e.target,
+          "user_RD2Om2HKl0lJEV1v3ag2a"
+        )
+        .then(
+          (result) => {
+            console.log("SUCCESS!", result.status, result.text);
+            this.valid = true;
+          },
+          (error) => {
+            console.log("FAILED...", error);
+          }
+        );
     },
   },
 };

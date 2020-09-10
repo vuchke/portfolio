@@ -487,79 +487,99 @@
           </h6>
         </div>
         <form class="form" @submit.prevent="checkForm">
-          <div class="input-group-wrap">
-            <div class="input-group">
-              <label for="name">Name:</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your name"
-                v-model="name"
-              />
-              <span
-                class="form-bar"
-                :class="{'invalid-form-input': nameError}"
-              ></span>
-              <transition name="fadeInError">
-                <p class="form-error" v-if="nameError">
-                  Please enter your name
-                </p>
-              </transition>
-            </div>
-            <div class="input-group">
-              <label for="email">Email:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your Email"
-                v-model="email"
-              />
-              <span
-                class="form-bar"
-                :class="{'invalid-form-input': emailValidError || emailError}"
-              ></span>
-              <transition name="fadeInError">
-                <p class="form-error" v-if="emailError">
-                  Please enter your email
-                </p>
-              </transition>
-              <transition
-                ><p class="form-error" v-if="emailValidError">
-                  Please enter a valid email
-                </p>
-              </transition>
-            </div>
-          </div>
+          <transition name="flip" mode="out-in">
+            <div class="form-container" v-if="!valid">
+              <div class="input-group-wrap">
+                <div class="input-group">
+                  <label for="name">Name:</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    v-model="name"
+                  />
+                  <span
+                    class="form-bar"
+                    :class="{'invalid-form-input': nameError}"
+                  ></span>
+                  <transition name="fadeInError">
+                    <p class="form-error" v-if="nameError">
+                      Please enter your name
+                    </p>
+                  </transition>
+                </div>
+                <div class="input-group">
+                  <label for="email">Email:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your Email"
+                    v-model="email"
+                  />
+                  <span
+                    class="form-bar"
+                    :class="{'invalid-form-input': emailValidError || emailError}"
+                  ></span>
+                  <transition name="fadeInError" mode="out-in">
+                    <p class="form-error" v-if="emailError">
+                      Please enter your email
+                    </p>
+                  </transition>
+                  <transition name="fadeInError" mode="out-in"
+                    ><p class="form-error" v-if="emailValidError">
+                      Please enter a valid email
+                    </p>
+                  </transition>
+                </div>
+              </div>
 
-          <label for="subject">Subject:</label>
-          <textarea
-            name="subject"
-            id="subject"
-            cols="20"
-            rows="5"
-            placeholder="Subject"
-            v-model="message"
-          ></textarea>
-          <span
-            class="form-bar"
-            :class="{'invalid-form-input': messageError}"
-          ></span>
-          <transition name="fadeInError">
-            <p class="form-error" v-if="messageError">
-              Please enter your message
-            </p>
+              <label for="subject">Subject:</label>
+              <textarea
+                name="subject"
+                id="subject"
+                cols="20"
+                rows="5"
+                placeholder="Subject"
+                v-model="message"
+              ></textarea>
+              <span
+                class="form-bar"
+                :class="{'invalid-form-input': messageError}"
+              ></span>
+              <transition name="fadeInError">
+                <p class="form-error" v-if="messageError">
+                  Please enter your message
+                </p>
+              </transition>
+              <button
+                type="submit"
+                class="form-button"
+                :class="{'disabled': !formIsValid}"
+              >
+                Send Message
+              </button>
+            </div>
+            <div class="confirm-form-message" v-else>
+              <h2>Message was sent successfully</h2>
+              <lottie-player
+                style="width: 100px; height: 100px"
+                class="animated-icon"
+                src="./images/animated-icons/24-approved-checked-outline.json"
+                background="transparent"
+                speed="1"
+                autoplay
+                loop
+              ></lottie-player>
+              <p>Hey, thanks for reaching out to me!</p>
+              <p>
+                I have receved your message and will reply by email as soon as
+                possible.
+              </p>
+              <p>Stay awesome and have a great day! :)</p>
+            </div>
           </transition>
-          <button
-            type="submit"
-            class="form-button"
-            :class="{'disabled': !formIsValid}"
-          >
-            Send Message
-          </button>
-          errors: {{errors }} valid: {{valid}}
-          <p v-if="valid">Message sent</p>
         </form>
       </div>
     </section>
@@ -572,7 +592,17 @@
       </a>
       <p>&copy; 2020</p>
     </footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_RD2Om2HKl0lJEV1v3ag2a");
+      })();
+    </script>
 
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

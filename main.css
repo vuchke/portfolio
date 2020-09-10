@@ -682,6 +682,24 @@ li {
 .form-button.disabled:hover {
   color: red;
 }
+.confirm-form-message {
+  text-align: center;
+}
+.confirm-form-message h2 {
+  font-size: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+.confirm-form-message p {
+  padding: 0.5rem 0;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+.animated-icon {
+  margin: 2rem auto 4rem auto;
+}
+
 /*End contact*/
 
 /*Start footer*/
@@ -743,6 +761,30 @@ li {
   }
   100% {
     box-shadow: 0 0 0 0 rgba(42, 180, 182, 0);
+  }
+}
+
+.flip-enter-active {
+  animation: flip-in 0.4s ease-out forwards;
+}
+
+.flip-leave-active {
+  animation: flip-out 0.4s ease-out forwards;
+}
+@keyframes flip-out {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(90deg);
+  }
+}
+@keyframes flip-in {
+  from {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(0deg);
   }
 }
 
